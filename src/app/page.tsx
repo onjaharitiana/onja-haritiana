@@ -1,10 +1,11 @@
-import { ModeToggle } from "@/components/theme-toggle";
-
+import Header from "@/components/layout/Header";
+import { HeroSection } from "@/components/hero/HeroSection";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1>Hello World</h1>
-      <ModeToggle />
+    <div className="grid grid-rows-[20px_1fr_20px] min-h-screen gap-4 mx-auto font-[family-name:var(--font-geist-sans)]">
+      <Header />
+      <HeroSection />
+      <div className="min-h-screen bg-red-500"></div>
     </div>
   );
 }

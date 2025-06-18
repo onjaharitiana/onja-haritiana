@@ -68,7 +68,7 @@ export const ExpertiseSection = () => {
           ))}
         </div>
       </div>
-      <NextArrow sectionId="temoignages" />
+      <NextArrow sectionId="methode" />
     </section>
   );
 };

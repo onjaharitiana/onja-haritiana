@@ -70,6 +70,7 @@ const Temoignage = ({
 };
 
 export const Temoignages = () => {
+  return null;
   return (
     <section
       id="temoignages"

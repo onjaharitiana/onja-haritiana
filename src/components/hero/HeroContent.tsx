@@ -11,12 +11,12 @@ export const HeroContent = () => {
     <>
       <AnimatedGroup variants={transitionVariants}>
         <h1 className="mt-8 max-w-4xl mx-auto text-balance text-4xl md:text-6xl lg:mt-11 xl:text-[4.75rem]">
-          Le seul développeur web qui transforme les défis des PME en
+          Le seul développeur web qui transforme les défis des PME malagasy en
           opportunités digitales
         </h1>
         <p className="mx-auto mt-8 max-w-2xl text-balance text-lg">
           6 ans à développer pour des entreprises, aujourd'hui je mets cette
-          expertise au service des entrepreneurs qui veulent grandir.
+          expertise au service des entrepreneurs malagasy qui veulent grandir.
         </p>
       </AnimatedGroup>
       <AnimatedGroup

@@ -1,7 +1,7 @@
 import React from "react";
 import { HeroBackground } from "./HeroBackground";
 import { HeroContent } from "./HeroContent";
-import { HeroNext } from "./HeroNext";
+import { NextArrow } from "../NextArrow";
 
 export const transitionVariants = {
   item: {
@@ -25,7 +25,7 @@ export const transitionVariants = {
 
 export const HeroSection = () => {
   return (
-    <div className="overflow-hidden" id="accueil">
+    <div className="overflow-hidden relative" id="accueil">
       <div
         aria-hidden
         className="z-[2] absolute inset-0 pointer-events-none isolate opacity-50 contain-strict hidden lg:block"
@@ -34,8 +34,8 @@ export const HeroSection = () => {
         <div className="h-[80rem] absolute left-0 top-0 w-56 -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]" />
         <div className="h-[80rem] -translate-y-[350px] absolute left-0 top-0 w-56 -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]" />
       </div>
-      <section>
-        <div className="relative pt-24 md:pt-36">
+      <section className="min-h-screen flex flex-col items-center justify-center">
+        <div className="relative py-24 md:py-36">
           <HeroBackground />
           <div
             aria-hidden
@@ -47,10 +47,8 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
+        <NextArrow sectionId="expertise" />
       </section>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer">
-        <HeroNext />
-      </div>
     </div>
   );
 };

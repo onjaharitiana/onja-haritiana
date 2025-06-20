@@ -26,22 +26,24 @@ const MethodeItems = [
 ];
 
 const MethodeItem = ({
-  color,
   step,
   title,
   description,
   footer,
 }: {
-  color: string;
   step: number;
   title: string;
   description: string;
   footer?: string;
 }) => {
+  const colors = ["bg-blue-600", "bg-purple-600", "bg-red-600"];
+
   return (
     <div className="text-center">
       <div
-        className={`w-20 h-20 bg-${color}-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6`}
+        className={`w-20 h-20 ${
+          colors[step - 1]
+        } text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6`}
       >
         {step}
       </div>
@@ -78,7 +80,7 @@ export const Methode = () => {
         </div>
       </div>
 
-      <NextArrow sectionId="contact" />
+      <NextArrow sectionId="difference" />
     </section>
   );
 };

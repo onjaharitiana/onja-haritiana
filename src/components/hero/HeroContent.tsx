@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatedGroup } from "../ui/animated-group";
-import { transitionVariants } from "./HeroSection";
+import { transitionVariants } from "@/lib/transitions";
 import { scrollToSection } from "@/lib/utils";
 import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";

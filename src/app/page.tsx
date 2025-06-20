@@ -4,6 +4,7 @@ import { ExpertiseSection } from "@/components/ExpertiseSection";
 import { Temoignages } from "@/components/Temoignages";
 import { Methode } from "@/components/Methode";
 import { Difference } from "@/components/Difference";
+import { Contact } from "@/components/Contact";
 export default function Home() {
   return (
     <div className="min-h-screen gap-0 mx-auto font-[family-name:var(--font-geist-sans)]">
@@ -13,6 +14,7 @@ export default function Home() {
       <Temoignages />
       <Methode />
       <Difference />
+      <Contact />
     </div>
   );
 }

@@ -32,7 +32,7 @@ export async function sendContactEmail({
     await resend.emails.send({
       from: "Contact <contact@onja-haritiana.dev>",
       to: ["onja.developer@gmail.com"],
-      subject: `[Contact] ${subject}`,
+      subject: `[Onja Haritiana - Contact] ${subject}`,
       replyTo: email,
       html,
     });

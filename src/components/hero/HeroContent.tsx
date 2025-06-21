@@ -15,8 +15,9 @@ export const HeroContent = () => {
           opportunités digitales
         </h1>
         <p className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-          6 ans à développer pour des entreprises, aujourd'hui je mets cette
-          expertise au service des entrepreneurs malagasy qui veulent grandir.
+          6 ans à développer pour des entreprises, aujourd&apos;hui je mets
+          cette expertise au service des entrepreneurs malagasy qui veulent
+          grandir.
         </p>
       </AnimatedGroup>
       <AnimatedGroup

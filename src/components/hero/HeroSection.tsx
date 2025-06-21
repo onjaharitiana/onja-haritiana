@@ -2,7 +2,7 @@ import React from "react";
 import { HeroBackground } from "./HeroBackground";
 import { HeroContent } from "./HeroContent";
 import { NextArrow } from "../NextArrow";
-import { transitionVariants } from "@/lib/transitions";
+
 export const HeroSection = () => {
   return (
     <div className="overflow-hidden relative" id="accueil">

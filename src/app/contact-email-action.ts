@@ -37,7 +37,10 @@ export async function sendContactEmail({
       html,
     });
     return { success: true };
-  } catch (error: any) {
-    return { success: false, error: error?.message || "Erreur d'envoi" };
+  } catch (error) {
+    if (error instanceof Error) {
+      return { success: false, error: error.message };
+    }
+    return { success: false, error: "Erreur d'envoi" };
   }
 }

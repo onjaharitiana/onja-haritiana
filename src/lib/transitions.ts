@@ -16,4 +16,4 @@ export const transitionVariants = {
       },
     },
   },
-};
+} as const;

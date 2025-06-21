@@ -64,7 +64,7 @@ export const Contact2 = ({
   };
 
   return (
-    <section className="py-32">
+    <section className="py-20">
       <div className="container">
         <div className="mx-auto flex max-w-screen-xl flex-col justify-between gap-10 lg:flex-row lg:gap-20">
           <div className="mx-auto flex max-w-md flex-col justify-between gap-10">
@@ -74,6 +74,7 @@ export const Contact2 = ({
               </h1>
               <p className="text-muted-foreground">{description}</p>
             </div>
+            {/*
             <div className="mx-auto w-fit lg:mx-0">
               <h3 className="mb-6 text-center text-2xl font-semibold lg:text-left">
                 Contact :
@@ -101,6 +102,7 @@ export const Contact2 = ({
                 </li>
               </ul>
             </div>
+            */}
           </div>
           <div className="mx-auto flex max-w-screen-md flex-col gap-6 rounded-lg border p-10">
             {success && (

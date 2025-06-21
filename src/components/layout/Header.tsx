@@ -10,7 +10,7 @@ import { Button } from "../ui/button";
 const menuItems = [
   { id: "accueil", label: "Accueil" },
   { id: "expertise", label: "Expertise" },
-  { id: "temoignages", label: "Témoignages" },
+  // { id: "temoignages", label: "Témoignages" },
   { id: "methode", label: "Méthode" },
 ];
 

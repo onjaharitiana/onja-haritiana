@@ -57,8 +57,8 @@ export const ExpertiseSection = () => {
             Contrairement aux autres développeurs, je connais vos VRAIS défis
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Double expertise unique : standards européens + compréhension
-            profonde du marché malgache
+            Triple avantage : Expérience technique + Vision business +
+            Compréhension locale
           </p>
         </div>
 

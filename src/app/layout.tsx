@@ -4,8 +4,8 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
-import ClarityProvider from "@/components/ClarityProvider";
-import HotjarProvider from "@/components/HotjarProvider";
+import Hotjar from "@hotjar/browser";
+import Clarity from "@microsoft/clarity";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,6 +27,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const HOTJAR_SITE_ID = process.env.HOTJAR_SITE_ID;
+  const HOTJAR_VERSION = process.env.HOTJAR_VERSION;
+  const CLARITY_PROJECT_ID = process.env.CLARITY_PROJECT_ID;
+
+  Hotjar.init(Number(HOTJAR_SITE_ID), Number(HOTJAR_VERSION));
+  if (CLARITY_PROJECT_ID) {
+    Clarity.init(CLARITY_PROJECT_ID);
+  }
+
   return (
     <html lang="fr" suppressHydrationWarning>
       <body
@@ -43,8 +52,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ClarityProvider />
-          <HotjarProvider />
           {children}
           <Toaster />
         </ThemeProvider>

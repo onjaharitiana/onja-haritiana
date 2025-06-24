@@ -4,6 +4,8 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import ClarityProvider from "@/components/ClarityProvider";
+import HotjarProvider from "@/components/HotjarProvider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,6 +43,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <ClarityProvider />
+          <HotjarProvider />
           {children}
           <Toaster />
         </ThemeProvider>

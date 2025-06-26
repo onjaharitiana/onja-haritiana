@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description:
     "Développeur web expérimenté qui transforme les défis des PME malagasy en opportunités digitales",
   verification: {
-    google: "6otluVElUvYybaEweE00eqLzYBEVmRQ_sfJJzALldMM",
+    google: "bG3yPmIXPNiMm-QZyEqn9wF0XNW_Y-VwAGFtyrzs1mE",
   },
 };
 

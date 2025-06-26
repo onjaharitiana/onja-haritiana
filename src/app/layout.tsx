@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Onja Haritiana - Développeur Web Expert PME Madagascar",
   description:
     "Développeur web expérimenté qui transforme les défis des PME malagasy en opportunités digitales",
+  verification: {
+    google: "6otluVElUvYybaEweE00eqLzYBEVmRQ_sfJJzALldMM",
+  },
 };
 
 export default function RootLayout({

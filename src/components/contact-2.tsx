@@ -4,6 +4,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Hotjar from "@hotjar/browser";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -47,6 +48,10 @@ Contact2Props) => {
   } = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
   });
+  Hotjar.init(
+    Number(process.env.HOTJAR_SITE_ID!),
+    Number(process.env.HOTJAR_VERSION!)
+  );
 
   const [success, setSuccess] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
@@ -54,12 +59,15 @@ Contact2Props) => {
   const onSubmit = async (data: ContactFormValues) => {
     setSuccess(false);
     setError(null);
+    Hotjar.event("contact_form_submit");
     const res = await sendContactEmail(data);
     if (res.success) {
       setSuccess(true);
       reset();
+      Hotjar.event("contact_form_submit_success");
     } else {
       setError(res.error || "Erreur lors de l'envoi du message");
+      Hotjar.event("contact_form_submit_error");
     }
   };
 
